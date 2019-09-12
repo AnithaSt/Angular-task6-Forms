@@ -1,0 +1,42 @@
+<div class="header bg-info">
+    <br>
+    <br><br>
+    <br>
+</div>
+<div class="container-fluid bg-info">
+<div class="container bg-info">
+  <div class="row">
+    <div class="col-lg-4 col-md-3"></div>
+    <div class="col-lg-4 col-md-6 bg-white" >
+      <h2 class="text-center mt-5">Angular Template-Driven Forms</h2><br><br>
+        <form name="myform" #myform="ngForm">
+            <input type="text" name="myname" ngModel="" class="form-control" placeholder="Name" ><br><br>          
+            <input type="email" name="email" ngModel="" placeholder="Email"class="form-control" ><br><br>          
+            <input type="number" name="registerno" ngModel="" placeholder="Register No" class="form-control" ><br><br>
+            <input type="number" name="age" ngModel="" placeholder="Age" class="form-control" ><br><br>        
+            <input type="number" name="aadhaarno" ngModel="" placeholder="Aadhaar No" class="form-control" ><br><br>
+            <div class="text-center">
+            <button type="submit" (click)=sub(myform.value) class="mr-4">Submit</button>
+            <button type="submit" routerLink="/reactive" class="mr-4">Reactive</button>
+            <br><br>
+            </div>
+        </form>
+      <div class="detail">
+    <h5 class="text-center">{{user.myname}}</h5>
+    <h5 class="text-center">{{user.email}}</h5>
+    <h5 class="text-center">{{user.registerno}}</h5>
+    <h5 class="text-center">{{user.age}}</h5>
+    <h5 class="text-center">{{user.aadhaarno}}</h5>
+  </div>
+  </div>
+    <div class="col-lg-4 col-md-3"></div>
+  </div>
+</div>
+</div>
+<div class="footer bg-info">
+    <br>
+    <br>
+    <br>
+  <br>
+  </div>
+<router-outlet></router-outlet>
